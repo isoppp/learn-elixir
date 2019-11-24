@@ -1,21 +1,13 @@
-# Docsandtests
+## Generating documents
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `docsandtests` to your list of dependencies in `mix.exs`:
+- add 
 
 ```elixir
-def deps do
-  [
-    {:docsandtests, "~> 0.1.0"}
-  ]
-end
+    [
+        {:earmark, "~> 1.2", only: :dev},
+        {:ex_doc, "~> 0.19", only: :dev}
+    ]
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/docsandtests](https://hexdocs.pm/docsandtests).
-
+- `mix deps.get`
+- `mix docs`
