@@ -14,6 +14,9 @@ defmodule Docsandtests do
   ## Examples
   iex> Docsandtests.greet("isoppp")
   "Hi, isoppp"
+
+  # iex> Docsandtests.greet("isoppp")
+  # "This is failed in test!"
   """
   @spec greet(String.t()) :: String.t() # for statically analyze code
   def greet(name) do
