@@ -1,18 +1,22 @@
 defmodule Docsandtests do
   @moduledoc """
-  Documentation for Docsandtests.
+  This is document for a module
   """
 
   @doc """
-  Hello world.
+  This is document for function.
+  You can confirm using `h Docsandtests.greet`
+
+  ## Parameters
+
+    - name: String that represents the name of the person.
 
   ## Examples
-
-      iex> Docsandtests.hello()
-      :world
-
+  iex> Docsandtests.greet("isoppp")
+  "Hi, isoppp"
   """
-  def hello do
-    :world
+  @spec greet(String.t()) :: String.t() # for statically analyze code
+  def greet(name) do
+    "Hi, " <> name
   end
 end
