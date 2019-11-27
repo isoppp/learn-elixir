@@ -1,4 +1,5 @@
 string = <<105, 115, 111, 112, 112 ,112>>
+IO.inspect(is_binary("hi")) # true
 IO.inspect(string) # isoppp
 IO.inspect(string <> <<0>>) # <<105, 115, 111, 112, 112, 112, 0>>
 IO.inspect("Café")
