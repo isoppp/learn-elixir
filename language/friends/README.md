@@ -1,5 +1,14 @@
 # Friends
 
+- `mix ecto.gen.migration MIGRATION_NAME`
+- `mix ecto.migrate`
+
+### one to many relationships
+
+- add `has_many :resources` to model(one)
+- add `:resouce_model_id, references(:resource)` to migration(many)
+- add `blongs_to :resource, Resource.Module` to model(many)
+
 **TODO: Add description**
 
 ## Installation
