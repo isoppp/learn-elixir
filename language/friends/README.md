@@ -5,9 +5,16 @@
 
 ### one to many relationships
 
-- add `has_many :resources` to model(one)
 - add `:resouce_model_id, references(:resource)` to migration(many)
+- add `has_many :resources Resouce.Module` to model(one)
 - add `blongs_to :resource, Resource.Module` to model(many)
+
+### one to one relationships
+
+- add `:resource_id, references(:resource)` to migration
+- add `create unique_index(:resouces, [:resource_id])`
+- add `has_one :resouce Resouce.Module` to model
+- add `belongs_to :resource, Resource.Module` to model
 
 **TODO: Add description**
 
