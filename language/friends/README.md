@@ -16,7 +16,12 @@
 - add `has_one :resouce Resouce.Module` to model
 - add `belongs_to :resource, Resource.Module` to model
 
-**TODO: Add description**
+### many to many relationships
+
+- add `create unique_index(:movies_actors, [:movie_id, :actor_id])` to junction table
+- add `many_to_many :actors, Example.Actor, join_through: "movies_actors"` to movie schema
+- add `many_to_many :movies, Example.Movie, join_through: "movies_actors" to actor schema
+`
 
 ## Installation
 
